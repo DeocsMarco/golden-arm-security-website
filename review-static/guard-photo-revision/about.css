@@ -1,0 +1,11 @@
+/* About-only image fitting. The existing page and Industry grid stay unchanged. */
+body[data-page="about"].cc-about-page #about .about-illustration[data-guard-photo] img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+body[data-page="about"].cc-about-page #about .about-illustration[data-guard-photo][data-guard-photo="quality-assurance"] img {
+  max-width: 360px;
+  margin-inline: auto;
+}

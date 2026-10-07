@@ -1,0 +1,178 @@
+/* Responsive refinement of the deployed release.
+   Copy, assets, navigation structure and scroll controllers are unchanged.
+   Important declarations counter the measured legacy cascade and inline marker offsets. */
+@media (max-width: 1100px) {
+  body .site-header.site-header--client-feedback .menu-toggle {
+    font-size: 13px !important;
+    line-height: 1.2;
+    min-height: 44px;
+  }
+  body .site-header.site-header--client-feedback .nav-links :is(a, summary) {
+    font-size: 16px !important;
+    line-height: 1.35;
+  }
+  body .mobile-action-bar > a {
+    min-height: 48px;
+    font-size: 15px !important;
+    line-height: 1.35;
+  }
+  body[data-page="home"] :is(.hero-contact-rail__action, .hero-contact-rail__phone,
+    .home-technology-v4__primary, .home-technology-v4__link) {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    min-height: 48px;
+  }
+  body[data-page="home"] #about .home-services__list h4 {
+    font-size: 16px !important;
+    line-height: 1.4;
+  }
+}
+
+/* Recompose the tablet band rather than stretching the phone's long stack. */
+@media (min-width: 700px) and (max-width: 980px) {
+  body[data-page="home"] #about .home-about-services__shell {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    grid-template-areas: "copy services";
+    align-items: start;
+    gap: 32px;
+  }
+  body[data-page="home"] #about #home-about-title {
+    max-width: 14ch !important;
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+  body[data-page="home"] #about .home-about-services__services {
+    border-top: 0;
+    border-left: 1px solid #d5d9dc;
+    padding: 0 0 0 24px;
+  }
+  body[data-page="home"] #about .home-about-services__services-heading {
+    padding-top: 0;
+  }
+  body[data-page="home"] #about #home-services-title {
+    font-size: 24px !important;
+    line-height: 1.15;
+  }
+  body[data-page="home"] #about .home-services__list li {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 8px 12px;
+  }
+  body[data-page="home"] #about .home-services__list li > span {
+    font-size: 14px !important;
+    line-height: 1.4;
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+  body[data-page="home"] #about .home-services__list li > p { grid-column: 2; }
+}
+
+/* Four existing section links, now a predictable two-row phone index. */
+@media (max-width: 600px) {
+  body[data-page="about"].cc-about-page #about .cc-about-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 20px;
+    padding-block: 16px;
+  }
+  body[data-page="about"].cc-about-page #about .cc-about-nav a {
+    min-width: 0;
+    min-height: 52px;
+    text-wrap: balance;
+  }
+}
+
+/* Keep a readable card measure through the 561–640px transition. */
+@media (max-width: 640px) {
+  .cc-services .cc-shell { width: calc(100% - 36px); }
+  .cc-services :is(.cc-service-grid, .cc-reason-grid, .cc-planning-grid) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .cc-services .cc-service-card { padding: 20px; }
+  .cc-services .cc-service-card .cc-service-photo { margin-bottom: 16px; }
+  .cc-services .cc-service-badge { margin-bottom: 16px; }
+  .cc-services .cc-service-description { margin-block: 12px 16px; }
+}
+/* Keep tablet footer destinations touch-sized, with room for contact text. */
+@media (max-width: 1100px) {
+  body .site-footer.site-footer--client-feedback :is(.site-footer__group a, .site-footer__direct a, .site-footer__action > a) {
+    display: flex;
+    align-items: center;
+    min-height: 44px !important;
+    font-size: 14px !important;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  body[data-page="technology"] .technology-kv__action {
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  body .site-footer.site-footer--client-feedback .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body .site-footer.site-footer--client-feedback .site-footer__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 32px;
+  }
+}
+
+/* Static tablet states use content height. Fine-pointer motion starts at
+   981px and retains its original sticky stage and reserved scroll runway. */
+@media (min-width: 700px) and (max-width: 1100px) {
+  html:not(.has-technology-kv-motion) body[data-page="technology"] .technology-kv-story,
+  html:not(.has-technology-kv-motion) body[data-page="technology"] .technology-kv-stage.home-technology--v4 {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  html:not(.has-technology-kv-motion) body[data-page="technology"] .technology-kv__body.home-technology-v4__body {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-block: calc(var(--ga-header-block, 76px) + 36px) 56px !important;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+  }
+  body[data-page="technology"] .technology-kv__lede {
+    font-size: 16px !important;
+    line-height: 1.62 !important;
+  }
+}
+
+/* Separate office controls from assessment controls. Only presentation offsets
+   change; each leader still ends at the unchanged city-centroid anchor.
+   Length/angle are hypot(dx,dy) and atan2(-dy,-dx), respectively. */
+.cc-office-marker[data-office="san-juan"] {
+  --office-dx: -85px !important;
+  --office-dy: -28px !important;
+  --office-line: 89.493016px !important;
+  --office-angle: 18.232491deg !important;
+}
+.cc-office-marker[data-office="iloilo"] {
+  --office-dx: -108px !important;
+  --office-dy: -28px !important;
+  --office-line: 111.570605px !important;
+  --office-angle: 14.534455deg !important;
+}
+.cc-office-marker[data-office="cagayan-de-oro"] {
+  --office-dx: 40px !important;
+  --office-dy: -40px !important;
+  --office-line: 56.568542px !important;
+  --office-angle: 135deg !important;
+}
+/* Owner density/alignment correction: preserve content and controller bytes.
+   Keep a short, direct scroll interval instead of an extra viewport of travel. */
+html[data-home-technology-controller="scroll-linked"] body[data-page="home"] #technology {
+  --ga-home-technology-travel: calc(var(--header-h) + clamp(120px, 16svh, 180px));
+}
+html[data-home-technology-controller="scroll-linked"] body[data-page="home"] #technology .home-technology-v4__shell {
+  min-height: 0 !important;
+}
+body[data-page="technology"] #technology.cc-tech-features {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+}
+
+@media (forced-colors: active) {
+  body[data-page="home"] #about .home-about-services__services { border-color: CanvasText; }
+}

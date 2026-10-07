@@ -1,0 +1,365 @@
+/* Bounded copy successor. Historical hero and its motion stay in the incumbent
+   cascade. These static SAMPLE illustrations borrow only the redacted interface's
+   graphite panels, ruled records and restrained orange emphasis, never its data. */
+body[data-page="technology"].cc-technology {
+  --cc-tech-paper: #f1f3f4;
+  --cc-tech-ink: #171b1e;
+  --cc-tech-muted: #485158;
+}
+body[data-page="technology"] .cc-tech-rail {
+  width: min(1320px, calc(100% - 2 * var(--subpage-gutter, 32px)));
+  margin-inline: auto;
+}
+body[data-page="technology"] .cc-tech-emergency {
+  background: #feca06;
+  color: #171b1e;
+}
+body[data-page="technology"] .cc-tech-emergency-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: 32px;
+  padding-block: 32px;
+}
+body[data-page="technology"] .cc-tech-emergency h2 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(23px, 2.2vw, 30px);
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+body[data-page="technology"] .cc-tech-emergency p {
+  max-width: 65ch;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+body[data-page="technology"] .cc-tech-features {
+  background: var(--cc-tech-paper);
+  color: var(--cc-tech-ink);
+}
+body[data-page="technology"] .cc-tech-feature-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 48px;
+  padding-block: 60px 36px;
+}
+body[data-page="technology"] .cc-tech-feature-intro h2 {
+  max-width: 20ch;
+  margin: 0;
+  color: inherit;
+  font-size: clamp(32px, 3.3vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+body[data-page="technology"] .cc-tech-feature-intro p {
+  max-width: 56ch;
+  margin: 0;
+  color: var(--cc-tech-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+body[data-page="technology"] .cc-tech-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+  padding-block: 48px;
+  border-top: 1px solid #c9ced2;
+  scroll-margin-top: 110px;
+}
+body[data-page="technology"] .cc-tech-row:nth-child(even) .cc-tech-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+body[data-page="technology"] .cc-tech-row:nth-child(even) .cc-sample {
+  grid-column: 1;
+  grid-row: 1;
+}
+body[data-page="technology"] .cc-tech-copy {
+  min-width: 0;
+}
+body[data-page="technology"] .cc-tech-copy h3 {
+  margin: 0 0 18px;
+  color: inherit;
+  font-size: clamp(30px, 2.7vw, 40px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+body[data-page="technology"] .cc-tech-description {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--cc-tech-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+body[data-page="technology"] .cc-tech-proofline {
+  margin: 24px 0 0;
+  color: #715600;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.4;
+  font-weight: 700;
+}
+body[data-page="technology"] .cc-sample {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+body[data-page="technology"] .cc-sample-window {
+  border: 1px solid #353638;
+  border-radius: 12px;
+  background: #141416;
+  color: #f6f6f7;
+  overflow: hidden;
+}
+body[data-page="technology"] .cc-sample-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 22px;
+  border-bottom: 1px solid #363638;
+  background: #1c1c1e;
+}
+body[data-page="technology"] .cc-sample-header p {
+  margin: 0;
+  color: #f6f6f7;
+  font-size: 17px;
+  font-weight: 700;
+}
+body[data-page="technology"] .cc-sample-label {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: #feca06;
+  color: #171717;
+  font-size: 12px;
+  letter-spacing: .06em;
+  font-weight: 800;
+}
+body[data-page="technology"] .cc-sample-content {
+  padding: 20px 22px 22px;
+}
+body[data-page="technology"] .cc-sample-context {
+  margin: 0 0 18px;
+  color: #c4c4c8;
+  font-size: 13px;
+}
+body[data-page="technology"] :is(.cc-sample-checkin, .cc-sample-report) {
+  display: grid;
+  grid-template-columns: minmax(100px, .65fr) minmax(0, 1.35fr);
+  align-items: stretch;
+  gap: 20px;
+}
+body[data-page="technology"] .cc-sample-attachment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 10px;
+  border: 1px dashed #636367;
+  background: #202022;
+  color: #d6d6d9;
+  text-align: center;
+  font-size: 13px;
+}
+body[data-page="technology"] .cc-sample-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+body[data-page="technology"] .cc-sample-fields {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+body[data-page="technology"] .cc-sample-fields dt {
+  color: #adadb4;
+  font-size: 12px;
+}
+body[data-page="technology"] .cc-sample-fields dd {
+  margin: 3px 0 0;
+  color: #f6f6f7;
+  font-size: 14px;
+}
+body[data-page="technology"] .cc-sample-status {
+  display: inline-block;
+  margin: 18px 0 0;
+  padding: 5px 9px;
+  border-radius: 3px;
+  background: #30241e;
+  color: #ffb88d;
+  font-size: 12px;
+  font-weight: 600;
+}
+body[data-page="technology"] .cc-sample-log {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body[data-page="technology"] .cc-sample-log li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  border-top: 1px solid #363638;
+}
+body[data-page="technology"] .cc-sample-log li div > * {
+  display: block;
+}
+body[data-page="technology"] .cc-sample-log li div > span {
+  margin-top: 4px;
+  color: #adadb4;
+  font-size: 12px;
+}
+body[data-page="technology"] .cc-sample-log .cc-sample-status {
+  margin: 0;
+}
+body[data-page="technology"] .cc-sample-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+body[data-page="technology"] .cc-sample-table :is(th, td) {
+  padding: 12px 8px;
+  border-bottom: 1px solid #363638;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+body[data-page="technology"] .cc-sample-table th {
+  background: #252527;
+  color: #c4c4c8;
+  font-size: 12px;
+  font-weight: 500;
+}
+body[data-page="technology"] .cc-sample-latest {
+  margin-top: 20px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+}
+body[data-page="technology"] .cc-sample-feed {
+  gap: 0;
+}
+body[data-page="technology"] .cc-sample-feed > div {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: baseline;
+  gap: 20px;
+  padding-block: 16px;
+  border-top: 1px solid #363638;
+}
+body[data-page="technology"] .cc-sample-feed .cc-sample-status {
+  margin: 0;
+}
+body[data-page="technology"] .cc-sample figcaption {
+  margin-top: 12px;
+  color: var(--cc-tech-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+body[data-page="technology"] .cc-tech-disclosure {
+  margin-block: 0;
+  padding-block: 4px 42px;
+  color: var(--cc-tech-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+body[data-page="technology"] .cc-tech-guard-banner {
+  background: var(--cc-tech-paper);
+  color: var(--cc-tech-ink);
+}
+body[data-page="technology"] .cc-tech-guard-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 36px;
+}
+body[data-page="technology"] .cc-tech-guard-inner h2 {
+  max-width: 26ch;
+  margin: 0;
+  color: inherit;
+  font-size: clamp(25px, 2.4vw, 34px);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+body[data-page="technology"] .cc-tech-guard-inner a {
+  min-height: 48px;
+  text-align: center;
+}
+body[data-page="technology"] .cc-tech-guard-inner a:focus-visible {
+  outline: 3px solid #715600;
+  outline-offset: 5px;
+}
+@media (max-width: 800px) {
+  body[data-page="technology"] :is(.cc-tech-emergency-inner, .cc-tech-feature-intro, .cc-tech-row) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  body[data-page="technology"] .cc-tech-row:nth-child(even) :is(.cc-tech-copy, .cc-sample) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  body[data-page="technology"] .cc-tech-feature-intro {
+    padding-block: 40px 32px;
+  }
+  body[data-page="technology"] .cc-tech-row {
+    padding-block: 32px;
+  }
+  body[data-page="technology"] .cc-tech-description {
+    max-width: 65ch;
+    font-size: 16px;
+  }
+}
+@media (max-width: 420px) {
+  body[data-page="technology"] .cc-tech-rail {
+    width: calc(100% - 32px);
+  }
+  body[data-page="technology"] .cc-sample-header {
+    padding-inline: 14px;
+    gap: 10px;
+  }
+  body[data-page="technology"] .cc-sample-content {
+    padding-inline: 14px;
+  }
+  body[data-page="technology"] :is(.cc-sample-checkin, .cc-sample-report) {
+    grid-template-columns: minmax(80px, .65fr) minmax(0, 1.35fr);
+    gap: 12px;
+  }
+  body[data-page="technology"] .cc-sample-latest {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page="technology"] .cc-tech-guard-inner a {
+    width: 100%;
+  }
+}
+@media (forced-colors: active) {
+  body[data-page="technology"] :is(.cc-tech-emergency, .cc-tech-features, .cc-tech-guard-banner, .cc-sample-window, .cc-sample-header, .cc-sample-attachment, .cc-sample-label, .cc-sample-status) {
+    background: Canvas;
+    color: CanvasText;
+    border-color: CanvasText;
+  }
+  body[data-page="technology"] :is(.cc-sample-label, .cc-sample-status) {
+    border: 1px solid CanvasText;
+  }
+  body[data-page="technology"] .cc-tech-guard-inner a:focus-visible {
+    outline-color: Highlight;
+  }
+}
+@media print {
+  body[data-page="technology"] .cc-tech-row {
+    break-inside: avoid;
+  }
+}

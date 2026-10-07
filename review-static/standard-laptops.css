@@ -1,0 +1,63 @@
+/* Three desktop samples share one hardware model. Screen geometry belongs to
+   the device; the preserved illustrative records reflow inside that geometry.
+   Phones and the existing <=600px hardware-free readable cards are untouched. */
+@media (min-width: 601px) {
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) {
+    width: 620px;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-window {
+    /* cf-laptop's query box excludes its 40px base allowance; the lid adds
+       26px horizontal bezel. This fixes the screen border box at 16:10. */
+    height: calc(62.5cqw - 16.25px);
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-header {
+    padding: 10px 16px;
+    gap: 8px 12px;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-header p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-content {
+    padding: 16px;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-context {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-log li {
+    padding-block: 12px;
+    gap: 12px;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-table :is(th, td) {
+    padding: 10px 8px;
+    line-height: 1.5;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-latest {
+    margin-top: 14px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .65fr);
+    gap: 14px;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) .cc-sample-feed > div {
+    padding-block: 12px;
+  }
+  body[data-page="technology"] .cf-laptop:not(.cf-phone) :is(dt, dd, strong, span) {
+    line-height: 1.5;
+  }
+}
+/* Give a laptop the width its readable interface needs before the two-column
+   layout compresses the screen. Reset inherited alternating grid placement. */
+@media (min-width: 601px) and (max-width: 1279px) {
+  body[data-page="technology"] .cc-tech-row:has(.cf-laptop:not(.cf-phone)) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  body[data-page="technology"] .cc-tech-row:has(.cf-laptop:not(.cf-phone)) > :is(.cc-tech-copy, .cc-sample) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

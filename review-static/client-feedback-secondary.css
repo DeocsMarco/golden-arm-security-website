@@ -1,0 +1,152 @@
+/* Bounded client feedback: About 59–62, Careers 66, Services planning 65.
+   #22262a is Home Technology's incumbent near-black base in
+   /review-static/home/device-refinement.css. Its decorative radial light is
+   not copied. Existing CSS, company media, copy and scripts stay immutable. */
+
+/* Section-local tokens reach the incumbent high-specificity text rules.
+   The isolated flat-color pseudo canvas extends the existing content rail
+   without changing its width, introducing a viewport-width box, or clipping
+   the section's own keyboard focus outline. */
+body[data-page="about"].cc-about-page #about #who-we-are,
+body[data-page="about"].cc-about-page #about #quality-assurance {
+  --cc-about-ink: #f7f8f9;
+  --cc-about-muted: #c1c6cb;
+  --cc-about-rule: #474d53;
+  position: relative;
+  isolation: isolate;
+  background: #22262a;
+  color: var(--cc-about-ink);
+}
+body[data-page="about"].cc-about-page #about #who-we-are::before,
+body[data-page="about"].cc-about-page #about #quality-assurance::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #22262a;
+  box-shadow: 0 0 0 100vmax #22262a;
+  clip-path: inset(0 -100vmax);
+}
+body[data-page="about"].cc-about-page #about #who-we-are:focus-visible,
+body[data-page="about"].cc-about-page #about #quality-assurance:focus-visible {
+  outline-color: #feca06;
+}
+
+/* Deliberately light: only the standalone Motto h3 is removed from HTML.
+   The motto sentence, section title, navigation, Vision and Mission remain. */
+body[data-page="about"].cc-about-page #about #mission-vision {
+  --cc-about-ink: #171817;
+  --cc-about-muted: #50534e;
+  --cc-about-rule: #d5d5ce;
+  background: #fff;
+  color: var(--cc-about-ink);
+}
+
+/* Retain the incumbent portrait's natural proportions and complete frame. */
+body[data-page="about"].cc-about-page #about #quality-assurance .about-illustration[data-guard-photo="quality-assurance"] img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* Color-block Careers hero. The original figure and asset stay in the HTML
+   and base package; only this hero's presentation suppresses the photo. */
+body[data-page="careers"] .review-careers-hero {
+  display: block;
+  min-height: 0;
+  background: #22262a;
+  color: #f7f8f9;
+}
+body[data-page="careers"] .review-careers-hero > .review-careers-media {
+  display: none;
+}
+body[data-page="careers"] .review-careers-hero > .review-careers-copy {
+  width: min(1280px, calc(100% - 2 * clamp(18px, 5vw, 72px)));
+  margin-inline: auto;
+  padding: clamp(48px, 6vw, 80px) 0;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-title {
+  max-width: 20ch;
+  color: #f7f8f9;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-lede {
+  color: #c1c6cb;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-actions .button--quiet {
+  background: transparent;
+  border-color: #c1c6cb;
+  color: #f7f8f9;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-actions .button--quiet:hover {
+  background: #30363b;
+  border-color: #f7f8f9;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-actions .button--gold:hover {
+  background: #ffdc52;
+  border-color: #ffdc52;
+  color: #171b20;
+}
+body[data-page="careers"] .review-careers-hero .review-careers-actions .button:focus-visible {
+  outline: 3px solid #feca06;
+  outline-offset: 4px;
+}
+
+/* Four authored geometric pictograms share the 32px / 1.75 stroke system.
+   They decorate, never replace, the accessible planning headings. */
+body[data-page="services"] #planning-coordination [data-planning-item] h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+body[data-page="services"] #planning-coordination .cf-secondary-planning-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  color: #705400;
+}
+
+@media (forced-colors: active) {
+  body[data-page="about"].cc-about-page #about #who-we-are,
+  body[data-page="about"].cc-about-page #about #quality-assurance,
+  body[data-page="about"].cc-about-page #about #mission-vision {
+    --cc-about-ink: CanvasText;
+    --cc-about-muted: CanvasText;
+    --cc-about-rule: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+  body[data-page="about"].cc-about-page #about #who-we-are::before,
+  body[data-page="about"].cc-about-page #about #quality-assurance::before {
+    background: Canvas;
+    box-shadow: none;
+  }
+  body[data-page="about"].cc-about-page #about #who-we-are:focus-visible,
+  body[data-page="about"].cc-about-page #about #quality-assurance:focus-visible {
+    outline-color: Highlight;
+  }
+  body[data-page="careers"] .review-careers-hero {
+    background: Canvas;
+    color: CanvasText;
+  }
+  body[data-page="careers"] .review-careers-hero .review-careers-title,
+  body[data-page="careers"] .review-careers-hero .review-careers-lede {
+    color: CanvasText;
+  }
+  body[data-page="careers"] .review-careers-hero .review-careers-actions .button,
+  body[data-page="careers"] .review-careers-hero .review-careers-actions .button:hover {
+    background: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  body[data-page="careers"] .review-careers-hero .review-careers-actions .button:focus-visible {
+    outline-color: Highlight;
+  }
+  body[data-page="services"] #planning-coordination .cf-secondary-planning-icon {
+    color: CanvasText;
+  }
+}

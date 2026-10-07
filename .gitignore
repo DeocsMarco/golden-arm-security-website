@@ -1,0 +1,8 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.vercel
+node_modules

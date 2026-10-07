@@ -1,0 +1,18 @@
+/* Client-copy successor: new components only; incumbent shell unchanged. */
+.cc-shell { width: min(1280px, calc(100% - clamp(40px, 8vw, 128px))); margin-inline: auto; }
+.cc-section { padding-block: clamp(48px, 7vw, 96px); }
+.cc-section--light { background: #fff; color: #171717; }
+.cc-section--dark { background: #171717; color: #f7f4eb; }
+.cc-title { margin: 0 0 24px; font-family: var(--font, 'Avenir Next GA', sans-serif); font-size: clamp(1.8rem, 3.7vw, 3.7rem); font-weight: 750; line-height: 1.08; letter-spacing: -.03em; text-wrap: balance; max-width: 24ch; }
+.cc-lead { max-width: 66ch; margin: 0 0 28px; font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.65; }
+.cc-action { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; max-width: 100%; padding-block: 8px; font-weight: 750; line-height: 1.4; text-underline-offset: .25em; }
+.cc-section--light .cc-action { color: #302600; }
+.cc-section--dark .cc-action { color: #feca06; }
+.cc-action:focus-visible, .cc-disclosure>summary:focus-visible { outline: 3px solid #a87b00; outline-offset: 5px; }
+.cc-disclosure { border-top: 1px solid currentColor; }
+.cc-disclosure>summary { min-height: 56px; padding: 18px 4px; cursor: pointer; font-size: 1.05rem; font-weight: 700; line-height: 1.45; }
+.cc-disclosure>p, .cc-disclosure>div { max-width: 72ch; padding: 0 4px 22px; margin: 0; line-height: 1.65; }
+.cc-disclosure:last-child { border-bottom: 1px solid currentColor; }
+.cc-note { font-size: .875rem; line-height: 1.55; max-width: 74ch; }
+@media(max-width:600px) { .cc-shell { width: calc(100% - 40px); } .cc-title { max-width: 24ch; } }
+@media(prefers-reduced-motion:reduce) { .cc-section *, .cc-section *::before, .cc-section *::after { scroll-behavior: auto; } }

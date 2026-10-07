@@ -1,0 +1,174 @@
+/* Technology-only successor: white introduction, then dark / white feature
+   bands in the existing article order. Reuse the approved hero graphite.
+   The screen UI, hero, closing actions, header and footer are not rethemed. */
+body[data-page="technology"] #technology.cc-tech-features {
+  --ga-tech-band-gutter: max(var(--subpage-gutter, 32px), calc((100% - 1320px) / 2));
+  background: #fff;
+  color: #171b1e;
+}
+
+/* Paint actual full-width boxes; keep the incumbent inner rail and grid.
+   No viewport-width pseudo-element, masking, or overhanging shadow. */
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-rail {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+}
+body[data-page="technology"] #technology.cc-tech-features > :is(.cc-tech-feature-intro, .cc-tech-disclosure),
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row {
+  box-sizing: border-box;
+  padding-inline: var(--ga-tech-band-gutter);
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-feature-intro,
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row {
+  --cc-tech-muted: #485158;
+  background: #fff;
+  color: #171b1e;
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row {
+  border-top-color: transparent;
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd),
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-disclosure {
+  --cc-tech-muted: #c1c6cb;
+  background: #22262a;
+  color: #f7f8f9;
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-disclosure {
+  color: #c1c6cb;
+}
+
+/* Match the incumbent rail's narrow-phone gutter exactly. */
+@media (max-width: 420px) {
+  body[data-page="technology"] #technology.cc-tech-features {
+    --ga-tech-band-gutter: 16px;
+  }
+}
+
+/* System colors take priority over visual alternation in high-contrast mode. */
+@media (forced-colors: active) {
+  body[data-page="technology"] #technology.cc-tech-features,
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-feature-intro,
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row,
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd),
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-disclosure {
+    --cc-tech-muted: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+    border-top-color: CanvasText;
+  }
+}
+
+/* Technology-page yellow light successor, 2026-09-28.
+   Translate the approved Home light/shadow palette only. Preserve all geometry,
+   motion, screen UI, white/dark alternation, source media and evidence labels. */
+body[data-page="technology"] #vantier {
+  background: #070809 !important;
+  color: #f4f4f2 !important;
+}
+body[data-page="technology"] #vantier .technology-kv-stage {
+  isolation: isolate;
+}
+body[data-page="technology"] #vantier .technology-kv-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 18%, #070809 64%),
+    linear-gradient(180deg, #070809 0%, transparent 23%, transparent 76%, #070809 100%),
+    linear-gradient(14deg, #070809 0%, #090a0b 22%, #feca063d 26%, #feca06 27%, #ffe77fbb 27.3%, #feca066b 29%, #08090a 34%, transparent 48%),
+    radial-gradient(ellipse at 24% 38%, #feca0699 0%, #feca062b 31%, #070809 65%);
+  background-repeat: no-repeat;
+}
+body[data-page="technology"] #vantier .technology-kv__copy,
+body[data-page="technology"] #vantier .technology-kv__copy h1 {
+  color: #f4f4f2 !important;
+  border-left-color: #ffffff29 !important;
+}
+body[data-page="technology"] #vantier .technology-kv__section-name {
+  color: #feca06 !important;
+}
+body[data-page="technology"] #vantier .technology-kv__lede {
+  color: #c7c9c9 !important;
+}
+body[data-page="technology"] #vantier #technology-interface-disclosure {
+  color: #fff !important;
+  background-color: transparent;
+  text-shadow: 0 1px 2px #070809, 0 0 2px #070809, 0 0 2px #070809;
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd) {
+  --cc-tech-muted: #c7c9c9;
+  color: #f4f4f2;
+  background:
+    linear-gradient(90deg, #070809 39%, transparent 83%),
+    linear-gradient(180deg, #070809 0%, transparent 26%, transparent 74%, #070809 100%),
+    linear-gradient(164deg, transparent 37%, #090a0b 57%, #feca0640 63%, #feca06 64%, #ffe77f99 64.4%, #feca064d 66%, #090a0b 71%),
+    radial-gradient(ellipse at 79% 42%, #feca065c, #070809 63%);
+  background-color: #070809;
+}
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-disclosure {
+  --cc-tech-muted: #c7c9c9;
+  color: #c7c9c9;
+  background: #070809;
+}
+/* Keep the evidence disclaimer on opaque ink, independent of the light beam. */
+body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd) .cc-sample > figcaption {
+  background-color: #070809;
+  color: #c7c9c9;
+}
+body[data-page="technology"] #vantier .technology-kv__action:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
+}
+@media (max-width: 720px) {
+  body[data-page="technology"] #vantier .technology-kv-stage::before {
+    height: clamp(460px, 112vw, 860px);
+    bottom: auto;
+    background:
+      linear-gradient(180deg, #070809 0%, transparent 20%, transparent 66%, #070809 100%),
+      linear-gradient(90deg, #070809 0%, transparent 18%, transparent 82%, #070809 100%),
+      linear-gradient(14deg, #070809 0%, #0b0c0d 24%, #feca063d 29%, #feca06 30%, #ffe77fbb 30.3%, #feca066b 32%, #08090a 40%, transparent 55%),
+      radial-gradient(ellipse at 58% 36%, #feca0699 0%, #feca0638 45%, #070809 76%);
+  }
+}
+@media (max-width: 800px) {
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd) {
+    background:
+      linear-gradient(180deg, #070809 0%, #070809 31%, transparent 57%, transparent 76%, #070809 100%),
+      linear-gradient(90deg, #070809 0%, transparent 20%, transparent 80%, #070809 100%),
+      linear-gradient(164deg, transparent 37%, #090a0b 57%, #feca0640 63%, #feca06 64%, #ffe77f99 64.4%, #feca064d 66%, #090a0b 71%),
+      radial-gradient(ellipse at 58% 68%, #feca065c, #070809 66%);
+    background-color: #070809;
+  }
+}
+@media (forced-colors: active) {
+  body[data-page="technology"] #vantier,
+  body[data-page="technology"] #vantier .technology-kv__copy,
+  body[data-page="technology"] #vantier .technology-kv__copy h1,
+  body[data-page="technology"] #vantier .technology-kv__section-name,
+  body[data-page="technology"] #vantier .technology-kv__lede,
+  body[data-page="technology"] #vantier #technology-interface-disclosure {
+    color: CanvasText !important;
+    background: Canvas !important;
+    border-color: CanvasText !important;
+  }
+  body[data-page="technology"] #vantier .technology-kv-stage::before {
+    display: none;
+  }
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd),
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-sequence > .cc-tech-row:nth-of-type(odd) .cc-sample > figcaption,
+  body[data-page="technology"] #technology.cc-tech-features > .cc-tech-disclosure {
+    --cc-tech-muted: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+  body[data-page="technology"] #vantier .technology-kv__action:focus-visible {
+    outline-color: Highlight;
+  }
+  /* Keep every sample-record label legible on the system Canvas as well. */
+  body[data-page="technology"] #technology .cc-sample :is(p, dt, dd, span, strong, th, td) {
+    color: CanvasText !important;
+  }
+}

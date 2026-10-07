@@ -1,0 +1,35 @@
+/* Owner-approved Services placements; preserve all incumbent copy and card roles. */
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-grid {
+  align-items: start;
+}
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-group {
+  display: grid;
+  gap: 28px;
+  min-width: 0;
+}
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-group > [data-planning-item]:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-media {
+  margin: 0 0 20px;
+}
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-media img[data-planning-photo="monitoring-report"] {
+  object-position: 50% 10%;
+}
+@media (max-width: 640px) {
+  body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-grid {
+    gap: 32px;
+  }
+  body[data-page="services"] #planning-coordination.services-owner-planning .cc-planning-group {
+    gap: 24px;
+  }
+}

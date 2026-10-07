@@ -1,0 +1,14 @@
+/* Home closing repair: compact feedback geometry is static-only.
+   The existing scroll-linked controller owns its active stage and runway.
+   Keep copy, background/photo, motion progress and input ownership unchanged. */
+html[data-home-plan-controller="scroll-linked"] body[data-page="home"] #next-step {
+  height: calc(var(--ga-home-chapter-h) + var(--ga-home-plan-travel)) !important;
+}
+html[data-home-plan-controller="scroll-linked"] body[data-page="home"] #home-site-navigator {
+  height: var(--ga-home-chapter-h) !important;
+  min-height: var(--ga-home-chapter-h) !important;
+}
+html[data-home-plan-controller="scroll-linked"] body[data-page="home"] #home-site-navigator .home-site-navigator__shell {
+  height: 100% !important;
+  grid-template-rows: minmax(0, 1fr) auto;
+}

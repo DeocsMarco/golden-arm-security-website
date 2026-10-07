@@ -1,0 +1,161 @@
+/* Readability successor. Keep the inherited root scale, layout, copy and media.
+   Pixel floors prevent old rem-based reductions from shrinking controls.
+   Important declarations are limited to typography over the legacy cascade. */
+body[data-page] {
+  --readable-body: clamp(17px, calc(15px + .21vw), 18px);
+  --readable-heading: clamp(22px, calc(20px + .25vw), 24px);
+}
+body[data-page] main p:not(:where(.section-kicker, .eyebrow, .home-prefooter-kv__line,
+  .cc-about-motto p, .cc-sample p, .cc-service-badge, .technology-kv__section-name,
+  .page-hero__intro, .coverage-banner .section-lede, .page-hero--credentials .section-lede,
+  .page-hero--industries .section-lede, .form-handoff-note,
+  .service-access-map-panel__boundary, .service-access-map-panel__note, .cc-office-legend)) {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+}
+/* Existing narrow component rules use ID selectors: keep the same scope. */
+body[data-page="home"] #about :is(.home-about__statement, .home-services__list p),
+body[data-page="home"] #technology :is(.home-technology-v4__intro, .home-technology-v4__features p),
+body[data-page="home"] #coverage :is(.cc-home-coverage-intro, .cc-home-coverage-cta p),
+body[data-page="services"] #planning-coordination [data-planning-item] p,
+body[data-page="services"] #why-choose .cc-reason-grid p {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+}
+/* Lists are substantive copy too, but do not resize device UI or map markers. */
+body[data-page] main :is(.cc-service-card details li, .serviceability-checklist li,
+  .privacy-policy li, .cc-about-quality-copy li, .coverage-assessment-action p,
+  .credential-assurance-card dd) {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+}
+body[data-page] main :is(.button, .cc-action, .hero-contact-rail__action,
+  .hero-contact-rail__phone, .home-technology-v4__primary, .home-technology-v4__link),
+body[data-page="technology"] .technology-kv__action {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  min-height: 48px;
+  max-width: 100%;
+  white-space: normal;
+}
+body[data-page] main :is(.credential-official-link, .coverage-flow li,
+  .coverage-region-index li, .credentials-hero-chips li) {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+body[data-page] main .credential-official-link {
+  min-height: 44px;
+  overflow-wrap: anywhere;
+}
+body[data-page="home"] #faq .cc-home-faq-item > summary,
+body[data-page="faq"] #faq details > summary {
+  font-size: clamp(18px, calc(16px + .25vw), 20px) !important;
+  line-height: 1.45 !important;
+  min-height: 56px;
+}
+body[data-page="services"] #services details > summary {
+  font-size: 17px !important;
+  line-height: 1.45 !important;
+  min-height: 44px;
+}
+body[data-page="home"] #about .home-services__list h4 {
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+}
+body[data-page="careers"] main :is(.review-welfare-copy h3, .careers-role-card__copy h3, .cc-careers-app h3),
+body[data-page="services"] #why-choose h3,
+body[data-page="services"] #planning-coordination h3 {
+  font-size: var(--readable-heading) !important;
+  line-height: 1.35 !important;
+}
+body[data-page="contact"] main :is(.contact-directory h3, .contact-form--guided label) {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+}
+body[data-page="contact"] main .contact-directory a {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+  overflow-wrap: anywhere;
+}
+body[data-page="contact"] main :is(input:not([type="checkbox"]):not([type="hidden"]), textarea, select) {
+  font-size: 17px !important;
+  line-height: 1.5 !important;
+  min-height: 48px;
+  min-width: 0;
+  max-width: 100%;
+}
+body[data-page="contact"] main .customer-inquiry__heading h2 {
+  font-size: clamp(26px, calc(23px + .5vw), 32px) !important;
+  line-height: 1.2 !important;
+}
+body[data-page] main :is(.form-handoff-note, .service-access-map-panel__boundary,
+  .service-access-map-panel__note, .cc-office-legend) {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+body[data-page] main :is(figcaption, .credential-assurance-card dt, .cc-sample dt) {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+body[data-page="contact"] #contact .contact-directory__grid article :is(p, a),
+body[data-page="contact"] #customer-inquiry .customer-inquiry__heading .section-lede,
+body[data-page="coverage"] #coverage .serviceability-checklist li,
+body[data-page="credentials"] #credentials .credential-fact-grid dd {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+}
+body[data-page="contact"] #contact .contact-directory__grid article h3,
+body[data-page="contact"] #customer-inquiry .cc-contact-form :is(label, .field__label, .button, .form-handoff-note),
+body[data-page="home"] #coverage :is(.service-access-map-panel__boundary, .service-access-map-panel__note) {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+body[data-page="contact"] #customer-inquiry .customer-inquiry__heading .section-title {
+  font-size: clamp(26px, calc(23px + .5vw), 32px) !important;
+  line-height: 1.2 !important;
+}
+body[data-page="coverage"] #coverage .coverage-flow li {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+body[data-page="credentials"] #credentials .credential-fact-grid dt,
+body[data-page="home"] #technology .home-technology-v4__art figcaption {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+body[data-page="contact"].contact-refined #customer-inquiry .contact-form--compact .form-handoff-note,
+body[data-page="contact"].contact-refined #customer-inquiry .contact-form--compact .field__label {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+body[data-page="faq"] #faq details p,
+body[data-page="industries"].site-types-final #site-type-atlas .industry-card__content p {
+  font-size: var(--readable-body) !important;
+  line-height: 1.65 !important;
+}
+/* A nested legacy grid placed every agency link in the same grid cell.
+   Let each destination wrap independently instead of overlapping. */
+body[data-page="credentials"] #credentials .compliance-card .credential-official-links {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 8px;
+  min-width: 0;
+}
+body[data-page="credentials"] #credentials .credential-official-links > .credential-official-link {
+  grid-area: auto !important;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Avoid enlarging actual screenshot pixels or the sample-device geometry. */
+body[data-page] main :is(.hero-actions, .review-careers-actions, .page-next__actions,
+  .credential-official-links) { flex-wrap: wrap; }
+body[data-page] main :is(.compliance-card, .cc-service-card, .review-welfare-copy,
+  .careers-role-card__copy, .contact-directory, .customer-inquiry) { min-width: 0; }
+@media (max-width: 700px) {
+  body[data-page="credentials"] main .compliance-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page="coverage"] main .coverage-flow { flex-wrap: wrap; }
+}

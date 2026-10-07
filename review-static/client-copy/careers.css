@@ -1,0 +1,181 @@
+/* Client-copy Careers successor. Preserve all incumbent media and shell rules. */
+body[data-page="careers"] .review-careers-title {
+  font-size: clamp(38px, 3.5vw, 52px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+body[data-page="careers"] .review-welfare {
+  padding-block: clamp(48px, 5vw, 72px);
+}
+body[data-page="careers"] .review-welfare-item:last-child {
+  grid-column: auto;
+}
+body[data-page="careers"] .review-welfare-copy p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+body[data-page="careers"] .cc-careers-app {
+  background: #f0eee7;
+  color: #202327;
+}
+body[data-page="careers"] :is(.cc-careers-app, .cc-careers-apply) {
+  scroll-margin-top: calc(var(--header-safe, 78px) + 20px);
+}
+body[data-page="careers"] .cc-careers-app__layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 6vw, 84px);
+}
+body[data-page="careers"] :is(.cc-careers-app, .cc-careers-apply) .cc-title {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+}
+body[data-page="careers"] :is(.cc-careers-app, .cc-careers-apply) .cc-lead {
+  font-size: 18px;
+  font-weight: 400;
+}
+body[data-page="careers"] .cc-careers-app .cc-title {
+  max-width: 18ch;
+}
+body[data-page="careers"] .cc-careers-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body[data-page="careers"] .cc-careers-features li {
+  min-width: 0;
+  padding-top: 18px;
+  border-top: 1px solid #b5b4ae;
+}
+body[data-page="careers"] .cc-careers-features h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
+body[data-page="careers"] .cc-careers-features p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #50544b;
+}
+body[data-page="careers"] .cc-careers-download {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 28px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #b5b4ae;
+}
+body[data-page="careers"] .cc-careers-download p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+body[data-page="careers"] .cc-careers-download .cc-action {
+  color: #302600;
+}
+body[data-page="careers"] .cc-careers-apply .cc-lead {
+  margin-bottom: 20px;
+}
+body[data-page="careers"] .cc-careers-apply .cc-action {
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 1px solid #feca06;
+  border-radius: 3px;
+  background: #feca06;
+  color: #171b20;
+  text-decoration: none;
+}
+body[data-page="careers"] .cc-careers-download .cc-action:hover {
+  text-decoration-thickness: 2px;
+}
+body[data-page="careers"] .cc-careers-apply .cc-action:hover {
+  background: #ffdc52;
+  border-color: #ffdc52;
+}
+/* Match the accepted role layer's specificity; keep its phone image/title pair
+   and the broad paragraph row rather than squeezing body copy beside a thumb. */
+body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .career-roles__heading {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .career-roles__heading .section-title {
+  max-width: 20ch;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.12;
+}
+body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-ledger {
+  grid-auto-rows: auto;
+}
+body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-card__copy {
+  padding: 18px 20px 20px !important;
+}
+body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-card__copy h3 {
+  max-width: 100%;
+  font-size: 20px !important;
+}
+@media (min-width: 1101px) {
+  body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-ledger {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 900px) {
+  body[data-page="careers"] .cc-careers-app__layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  body[data-page="careers"] .cc-careers-app .cc-title {
+    max-width: 24ch;
+  }
+}
+@media (max-width: 720px) {
+  body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .career-roles__heading {
+    grid-template-columns: 1fr;
+  }
+  body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-card__copy {
+    padding: 0 !important;
+  }
+  body[data-page=careers].careers-final.careers-proof.careers-compact #role-families .careers-role-card__copy p {
+    max-width: 58ch;
+  }
+}
+@media (max-width: 560px) {
+  body[data-page="careers"] .review-careers-title {
+    font-size: clamp(36px, 9.3vw, 46px);
+  }
+  body[data-page="careers"] :is(.cc-careers-app, .cc-careers-apply) .cc-lead {
+    font-size: 16px;
+  }
+  body[data-page="careers"] .cc-careers-features {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+@media (forced-colors: active) {
+  body[data-page="careers"] :is(.cc-careers-app, .cc-careers-apply) {
+    background: Canvas;
+    color: CanvasText;
+  }
+  body[data-page="careers"] :is(.cc-careers-features p, .cc-careers-download .cc-action) {
+    color: CanvasText;
+  }
+  body[data-page="careers"] :is(.cc-careers-features li, .cc-careers-download) {
+    border-color: CanvasText;
+  }
+  body[data-page="careers"] .cc-careers-apply .cc-action {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}

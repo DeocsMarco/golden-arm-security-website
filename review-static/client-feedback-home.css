@@ -1,0 +1,336 @@
+/* Approved Home feedback 50–58. Additive overlay after responsive-polish.css.
+   No controller, scroll-runway, map coordinates, offsets or media changes.
+   The coverage layout flattens decorative wrappers only; the map's role=group,
+   live regions, marker DOM, selector ancestry and native focus behavior remain. */
+
+/* 51: larger unchanged image; content-led proof with column-major reading. */
+body[data-page="home"] #operating-proof {
+  height: auto;
+  min-height: 0;
+  padding-block: clamp(48px, 6vw, 88px);
+}
+body[data-page="home"] #operating-proof .home-operating-proof__grid {
+  width: min(1320px, calc(100% - 2 * clamp(20px, 4vw, 64px)));
+  max-width: none;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(28px, 3vw, 48px);
+}
+body[data-page="home"] #operating-proof .home-operating-proof__media {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+}
+body[data-page="home"] #operating-proof .home-operating-proof__media img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+body[data-page="home"] #operating-proof .home-operating-proof__copy h2 {
+  margin-block: 12px 20px;
+  font-weight: 780;
+}
+body[data-page="home"] #operating-proof .cc-home-proof-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  column-gap: 24px;
+  margin-top: 24px;
+}
+body[data-page="home"] #operating-proof .cc-home-proof-list li {
+  display: block;
+  min-width: 0;
+  padding-block: 16px;
+}
+body[data-page="home"] #operating-proof .cc-home-proof-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #feca06;
+  font-size: clamp(20px, 1.5vw, 22px);
+  font-weight: 750;
+  line-height: 1.3;
+}
+body[data-page="home"] #operating-proof .cc-home-proof-list p {
+  margin: 0;
+  font-size: clamp(1rem, 1.1vw, 1.1875rem);
+  line-height: 1.55;
+}
+
+/* 52: heading/intro first, then a 60/40 map and compact information column.
+   display:contents leaves the original JS query/closest/insertAfter contracts
+   intact. Never flatten the stage (role=group) or either live-status element. */
+body[data-page="home"] #coverage {
+  height: auto;
+  min-height: 0;
+  padding-block: clamp(40px, 4vw, 64px);
+}
+body[data-page="home"] #coverage .home-service-access-map-panel > .service-access-map-panel__header {
+  width: 100% !important;
+  max-width: none !important;
+  margin-inline: 0 !important;
+}
+body[data-page="home"] #coverage .home-service-access-map-panel {
+  display: block !important;
+}
+body[data-page="home"] #coverage .cc-home-coverage-intro {
+  max-width: 76ch;
+  margin-block: 24px 32px;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-rows: auto auto auto auto 1fr auto;
+  align-items: start;
+  gap: 16px clamp(28px, 4vw, 56px);
+  min-width: 0;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout :is(.service-access-map__frame, .service-access-map, .service-map__layout--home) {
+  display: contents !important;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .service-map__stage--home {
+  grid-area: 1 / 1 / 6 / 2 !important;
+  align-self: start;
+  justify-self: center !important;
+  width: min(100%, 420px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 420 / 680 !important;
+  margin: 0 auto !important;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .service-access-map__fallback {
+  grid-area: 1 / 1 / 6 / 2;
+  min-width: 0;
+  width: 100%;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .cc-home-offices {
+  grid-area: 1 / 2;
+  min-width: 0;
+  padding-block: 20px;
+}
+body[data-page="home"] #coverage .cc-home-offices h3 {
+  font-size: 22px;
+  font-weight: 750;
+  margin-bottom: 20px;
+}
+body[data-page="home"] #coverage .cc-home-offices ul {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+body[data-page="home"] #coverage .cc-home-offices strong {
+  font-size: 17px;
+  line-height: 1.35;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .service-map__layout--home > :is(.service-map__region-popout, .service-map__region-popout--left) {
+  grid-area: 2 / 2 !important;
+  align-self: start;
+  justify-self: stretch !important;
+  position: static !important;
+  inset: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 20px !important;
+  transform: none !important;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .service-map__region-popout[hidden],
+body[data-page="home"] #coverage .cf-home-coverage-layout .cc-office-selection[hidden] {
+  display: none !important;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .cc-office-legend {
+  grid-area: 6 / 1;
+  justify-self: center;
+  margin: 0;
+  font-size: .875rem;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .cc-office-selection {
+  grid-area: 3 / 2;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 16px 20px;
+  font-size: 1rem;
+  text-align: left;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout .cc-home-coverage-cta {
+  grid-area: 4 / 2;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding-block: 20px;
+  border-top: 0;
+}
+body[data-page="home"] #coverage .cf-home-coverage-layout #home-service-access-map-note {
+  grid-area: 5 / 2;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 54–56: explicit hierarchy and one yellow Technology destination.
+   Deliberately no Technology shell/body/art geometry or runway declarations. */
+body[data-page="home"] #technology #home-technology-title {
+  font-weight: 780;
+}
+body[data-page="home"] #technology .home-technology-v4__ledger h3 {
+  font-size: clamp(20px, 1.6vw, 24px) !important;
+  font-weight: 750;
+  line-height: 1.3;
+}
+body[data-page="home"] #technology .home-technology-v4__proposition {
+  font-weight: 750;
+}
+body[data-page="home"] #technology .home-technology-v4__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 22px;
+  color: #171b20 !important;
+  background-color: #feca06 !important;
+  border: 1px solid #feca06 !important;
+  min-height: 48px;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+body[data-page="home"] #technology .home-technology-v4__link:hover {
+  color: #171b20 !important;
+  background-color: #ffe27b !important;
+  border-color: #ffe27b !important;
+}
+body[data-page="home"] #technology .home-technology-v4__link:focus-visible {
+  outline: 3px solid #feca06;
+  outline-offset: 5px;
+}
+
+/* 57: clear FAQ title; native disclosures retain all original Q/A content. */
+body[data-page="home"] #faq {
+  height: auto;
+  min-height: 0;
+  padding-block: clamp(40px, 4vw, 64px);
+}
+body[data-page="home"] #faq .cc-home-faq-shell {
+  grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 56px);
+}
+body[data-page="home"] #faq #home-faq-title {
+  margin: 0;
+  font-size: clamp(2.75rem, 4vw, 3.75rem);
+  font-weight: 780;
+  line-height: 1.05;
+}
+body[data-page="home"] #faq .cf-home-faq-heading > p {
+  max-width: 28ch;
+  margin: 16px 0 0;
+  color: #505b63;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+body[data-page="home"] #faq .cc-home-faq-item summary {
+  min-height: 52px;
+  padding-block: 14px;
+}
+body[data-page="home"] #faq .cc-home-faq-item p {
+  padding-bottom: 16px;
+}
+body[data-page="home"] #faq .text-link {
+  margin-top: 16px;
+}
+
+/* 58: collapse inherited chapter minimums and both padding layers.
+   Background image, gradient overlays, copy and destinations are untouched. */
+body[data-page="home"] #next-step {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-block: 0 !important;
+}
+body[data-page="home"] #home-site-navigator {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-block: 0 !important;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__shell {
+  height: auto !important;
+  min-height: 0 !important;
+  grid-template-rows: auto auto;
+  padding-block: clamp(32px, 4vw, 56px) !important;
+  row-gap: 24px;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__heading {
+  padding: 20px !important;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__heading > p:last-child {
+  margin-top: 20px;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__editorial-list a {
+  min-height: 76px;
+  padding-block: 14px;
+}
+
+@media (max-width: 980px) {
+  body[data-page="home"] #operating-proof .home-operating-proof__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page="home"] #operating-proof .home-operating-proof__media {
+    max-width: 760px;
+  }
+}
+@media (max-width: 980px) {
+  body[data-page="home"] #coverage .cf-home-coverage-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    gap: 20px;
+  }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .service-map__stage--home {
+    grid-area: 1 / 1 !important;
+    width: min(100%, 360px) !important;
+  }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .service-access-map__fallback { grid-area: 1 / 1; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .cc-office-legend { grid-area: 2 / 1; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .service-map__layout--home > :is(.service-map__region-popout, .service-map__region-popout--left) { grid-area: 3 / 1 !important; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .cc-office-selection { grid-area: 4 / 1; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .cc-home-offices { grid-area: 5 / 1; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout .cc-home-coverage-cta { grid-area: 6 / 1; }
+  body[data-page="home"] #coverage .cf-home-coverage-layout #home-service-access-map-note { grid-area: 7 / 1; }
+  body[data-page="home"] #faq .cc-home-faq-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  body[data-page="home"] #operating-proof .cc-home-proof-list {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+  body[data-page="home"] #home-site-navigator .home-site-navigator__heading {
+    padding: 16px !important;
+  }
+}
+@media (forced-colors: active) {
+  body[data-page="home"] #operating-proof .cc-home-proof-list strong,
+  body[data-page="home"] #faq .cf-home-faq-heading > p {
+    color: CanvasText;
+  }
+  body[data-page="home"] #technology .home-technology-v4__link,
+  body[data-page="home"] #technology .home-technology-v4__link:hover {
+    color: LinkText !important;
+    background-color: Canvas !important;
+    border-color: LinkText !important;
+  }
+  body[data-page="home"] #technology .home-technology-v4__link:focus-visible {
+    outline-color: Highlight;
+  }
+}

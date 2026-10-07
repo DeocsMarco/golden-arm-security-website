@@ -1,0 +1,9 @@
+/* Owner correction: yellow applies to About's on-page navigation only.
+   Darker yellow-gold maintains >=4.5:1 contrast on the unchanged white strip. */
+body[data-page="about"].cc-about-page #about .cc-about-nav > a {
+  color: #927000;
+  text-decoration-color: currentColor;
+}
+@media (forced-colors: active) {
+  body[data-page="about"].cc-about-page #about .cc-about-nav > a { color: LinkText; }
+}

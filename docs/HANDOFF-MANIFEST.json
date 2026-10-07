@@ -1,0 +1,60 @@
+{
+  "domain": "goldenarmsecurity.ph",
+  "artifact": "static website GitHub handoff",
+  "source_static_root": "/mnt/d/hcoding/golden-arm-caption-production-20260928/package/.vercel/output/static",
+  "generated_at_utc": "2026-10-07T08:28:11Z",
+  "file_count": 277,
+  "total_bytes": 75523297,
+  "largest_files": [
+    {
+      "path": "assets/generated/home-kv-scroll/golden-arm-home-kv-1440p-62c56106a672.mp4",
+      "bytes": 36156140,
+      "sha256": "62c56106a67280c8939e7271e7d56228ce4dcd46c12f3faeb9334802e61add78"
+    },
+    {
+      "path": "assets/generated/home-kv-scroll/golden-arm-home-kv-flyover-rife426-scroll-scrub-60fps.mp4",
+      "bytes": 14095968,
+      "sha256": "93e33be5c9a1bde650eb884caa6299fe38c850861e34df7246c34892a910960b"
+    },
+    {
+      "path": "assets/main-CfH3XNFK.css",
+      "bytes": 771915,
+      "sha256": "ddf1c845f25d34a4895555c5f594ba2080f64c616541fc41a0c54bdb80455fee"
+    },
+    {
+      "path": "review-static/combined-technology/hero-desktop.png",
+      "bytes": 696945,
+      "sha256": "2ddaa1a6e7433875a0ca78be62cc260495eeb3750ac61b8dc59fb9f3110c13e2"
+    },
+    {
+      "path": "review-static/combined-technology/locations-laptop.png",
+      "bytes": 652710,
+      "sha256": "80f07ee8fe87a88c4309ec844637006f319d64057336afeb73ea36056434f955"
+    },
+    {
+      "path": "assets/coverage/metro-manila-bgc-makati-sunset.webp",
+      "bytes": 577116,
+      "sha256": "b80a750036cd2ba95fbda574e721855e26b6f6050b01eb98f2b839a54a1a5c91"
+    },
+    {
+      "path": "review-static/combined-technology/hero-dashboard-layer.png",
+      "bytes": 567757,
+      "sha256": "da5594b61e5b62ee8c1489bf3dcb35aeefed7bd22beeb20b46367c7b456d535f"
+    },
+    {
+      "path": "review-static/home/prior-home-media/desktop-settled.png",
+      "bytes": 479637,
+      "sha256": "447e3e2ece395a25eae28324f37f9feba31e3671f7267abc8f0987034e71b743"
+    },
+    {
+      "path": "review-static/technology/prior-home-media/desktop-settled.png",
+      "bytes": 479637,
+      "sha256": "447e3e2ece395a25eae28324f37f9feba31e3671f7267abc8f0987034e71b743"
+    },
+    {
+      "path": "assets/app/technology/guard-app-home-laptop-desktop.png",
+      "bytes": 460872,
+      "sha256": "26d028cd222212278923b95b56ca7acf6e100074b4ac0bb3b08179fd45ec8659"
+    }
+  ]
+}

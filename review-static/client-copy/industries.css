@@ -1,0 +1,26 @@
+/* Deployed hero and atlas reuse immutable incumbent CSS. Only retained client closing and supplementary grouping need route-local rules. */
+.cc-industries-layout .industry-group-title { grid-column: 1 / -1; margin: 36px 0 0; color: #202327; font-size: clamp(28px, 3vw, 40px); line-height: 1.18; }
+/* The deployed center crop overrides inline focal styles; top-align these square guard sources to preserve heads. */
+body[data-page=industries].site-types-final #site-type-atlas .industry-card__media img:is([data-guard-role=industry-bank],[data-guard-role=industry-hotel]) { object-position: 50% 0% !important; }
+.cc-industries-layout .cc-closing .cc-shell { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
+.cc-industries-layout .cc-closing :is(h2,p) { margin: 0; }
+.cc-industries-layout .cc-closing h2 { font-size: clamp(28px, 3vw, 40px); line-height: 1.18; font-weight: 700; letter-spacing: -.025em; }
+.cc-industries-layout .cc-closing p { font-size: 17px; line-height: 1.65; }
+.cc-industries-layout .cc-closing { position: relative; isolation: isolate; padding: 60px 0; background: #171b1e; color: #fff; }
+.cc-industries-layout .cc-closing-media { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+.cc-industries-layout .cc-closing-media::after { content: ""; position: absolute; inset: 0; background: #101619e8; }
+.cc-industries-layout .cc-closing-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.cc-industries-layout .cc-closing-inner { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 64px; align-items: end; }
+.cc-industries-layout .cc-closing h2 { margin-bottom: 16px; color: #fff; }
+.cc-industries-layout .cc-closing-description { max-width: 50ch; color: #e4e6e7; }
+.cc-industries-layout .cc-assessment { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 14px 22px; margin-top: 24px; background: #feca06; color: #171b1e; font-size: 16px; line-height: 1.4; font-weight: 700; text-decoration: none; }
+.cc-industries-layout .cc-assessment:hover { background: #ffe37a; }
+.cc-industries-layout .cc-coverage { padding-block: 8px; }
+.cc-industries-layout .cc-coverage-note { color: #e4e6e7; }
+.cc-industries-layout .cc-coverage a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; color: #fff; text-underline-offset: 5px; font-size: 16px; font-weight: 650; }
+.cc-industries-layout .cc-coverage a:hover { color: #feca06; }
+.cc-industries-layout .cc-closing a:focus-visible { outline-color: #feca06; }
+@media (max-width: 1100px) { .cc-industries-layout .cc-closing .cc-shell { width: calc(100% - 64px); } }
+@media (max-width: 800px) { .cc-industries-layout .cc-closing-inner { grid-template-columns: 1fr; gap: 28px; } .cc-industries-layout .cc-closing { padding: 44px 0; } }
+@media (max-width: 560px) { .cc-industries-layout .cc-closing .cc-shell { width: calc(100% - 36px); } .cc-industries-layout .cc-closing h2 { font-size: 30px; } .cc-industries-layout .cc-closing p { font-size: 16px; } }
+@media (forced-colors: active) { .cc-industries-layout .cc-assessment { border: 1px solid ButtonText; } .cc-industries-layout .cc-closing a:focus-visible { outline-color: Highlight; } .cc-industries-layout .cc-closing-media { display: none; } }

@@ -1,0 +1,42 @@
+/* Owner-requested Services icon family and equal About image frames.
+   Existing copy, photos, service disclosures and unrelated sections stay intact. */
+body[data-page="services"] #why-choose .cf-service-reason-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 14px;
+  color: #987000;
+}
+body[data-page="services"] #why-choose .cf-service-reason-icon svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+body[data-page="about"].cc-about-page #about #mission-vision .cc-about-statements .about-illustration {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+}
+body[data-page="about"].cc-about-page #about #mission-vision .cc-about-statements .about-illustration img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+body[data-page="about"].cc-about-page #about #mission-vision [data-about-statement="vision"] img {
+  object-position: 50% 38% !important;
+}
+body[data-page="about"].cc-about-page #about #mission-vision .cc-about-statements [data-about-statement="mission"] .about-illustration img {
+  object-fit: contain;
+}
+@media (forced-colors: active) {
+  body[data-page="services"] #why-choose .cf-service-reason-icon { color: CanvasText; }
+}

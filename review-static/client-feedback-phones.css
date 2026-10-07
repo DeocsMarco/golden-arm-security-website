@@ -1,0 +1,69 @@
+/* Two portrait SAMPLE illustrations only. Neutral hardware, not app evidence.
+   The cf-phone modifier wins over all incumbent laptop/container rules.
+   Content stays in normal flow; there is no screen cropping or scaling. */
+body[data-page="technology"] .cf-laptop.cf-phone {
+  width: 336px;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cf-laptop-lid {
+  padding: 34px 8px 16px;
+  border-radius: 36px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cf-laptop-lid::before {
+  display: block;
+  top: 12px;
+  left: calc(50% - 28px);
+  width: 56px;
+  height: 10px;
+  border-radius: 10px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cf-laptop-base { display: none; }
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-window {
+  height: auto;
+  overflow: visible;
+  border-radius: 22px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-header {
+  padding: 16px;
+  gap: 10px;
+  border-radius: 21px 21px 0 0;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-header p { font-size: 17px; }
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-content { padding: 18px 16px 22px; }
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-context {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone :is(.cc-sample-checkin, .cc-sample-report) {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-attachment {
+  flex-direction: row;
+  gap: 12px;
+  padding: 16px 10px;
+  font-size: 14px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-icon { width: 32px; height: 32px; }
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-fields {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-fields > div {
+  display: block;
+  padding-block: 10px;
+  border-top: 0;
+  border-bottom: 1px solid #363638;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-fields dt { font-size: 12px; }
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-fields dd {
+  margin: 3px 0 0;
+  font-size: 14px;
+}
+body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-status { margin-top: 18px; }
+@media (forced-colors: active) {
+  body[data-page="technology"] .cf-laptop.cf-phone .cc-sample-fields > div { border-color: CanvasText; }
+  body[data-page="technology"] .cf-laptop.cf-phone .cf-laptop-lid::before { background: CanvasText; }
+}

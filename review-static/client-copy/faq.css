@@ -1,0 +1,36 @@
+/* Native, initially collapsed answers; no script or rich-result dependency. */
+body[data-page="faq"] #faq .faq-utility__intro .section-title {
+  letter-spacing: -.035em;
+}
+body[data-page="faq"] #faq details {
+  scroll-margin-top: calc(var(--anchor-offset, 84px) + 24px);
+}
+body[data-page="faq"] #faq summary {
+  display: list-item;
+  list-style: disclosure-closed outside;
+  padding-left: 8px !important;
+  margin-left: 20px;
+  min-height: 52px;
+}
+body[data-page="faq"] #faq details[open] > summary {
+  list-style-type: disclosure-open;
+}
+body[data-page="faq"] #faq summary::marker {
+  color: #765900;
+}
+body[data-page="faq"] #faq summary:focus-visible {
+  outline: 2px solid #765900;
+  outline-offset: 4px;
+}
+body[data-page="faq"] #faq details > p {
+  color: #454b43 !important;
+}
+@media (forced-colors: active) {
+  body[data-page="faq"] #faq summary::marker,
+  body[data-page="faq"] #faq details > p {
+    color: CanvasText !important;
+  }
+  body[data-page="faq"] #faq summary:focus-visible {
+    outline-color: Highlight;
+  }
+}

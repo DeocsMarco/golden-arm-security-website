@@ -1,0 +1,5 @@
+action,host_name,type,value_to_use,notes,ttl,cloudflare_proxy_status
+Replace/delete current A records for @,@ / goldenarmsecurity.ph,A,Exact A value shown in the Vercel domain card,"Usually 76.76.21.21, but use the Vercel card as source of truth",300,DNS only / gray cloud
+Remove current apex IPv6 records,@ / goldenarmsecurity.ph,AAAA,Remove existing AAAA values,"Vercel docs say third-party custom domains do not support IPv6; leaving AAAA can split traffic/SSL",300,N/A
+Replace www records,www / www.goldenarmsecurity.ph,CNAME,Exact CNAME target shown in the Vercel domain card,"Example target may look like d1d4...vercel-dns-017.com; do not guess",300,DNS only / gray cloud
+Remove current www IPv4/IPv6 records,www / www.goldenarmsecurity.ph,A and AAAA,Remove existing A/AAAA values once CNAME is created,A name with a CNAME should not also keep A/AAAA records,300,N/A

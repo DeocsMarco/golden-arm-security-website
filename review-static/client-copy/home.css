@@ -1,0 +1,275 @@
+/* Client-confirmed Home copy successor. Existing runtime and media stay intact. */
+body[data-page="home"] #hero-title {
+  max-width: 22ch;
+  font-size: clamp(2.45rem, 4.5vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+}
+body[data-page="home"] .cc-home-metrics-title {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 600;
+  text-align: center;
+}
+body[data-page="home"] #operating-proof .home-operating-proof__grid {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 5vw, 72px);
+}
+body[data-page="home"] #operating-proof .home-operating-proof__copy h2 {
+  max-width: 18ch;
+  font-size: clamp(2.5rem, 4.1vw, 4rem);
+  letter-spacing: -.035em;
+  line-height: 1.03;
+}
+body[data-page="home"] .cc-home-proof-list {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+  border-top: 1px solid #ffffff40;
+}
+body[data-page="home"] .cc-home-proof-list li {
+  display: grid;
+  grid-template-columns: minmax(138px, .42fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ffffff40;
+}
+body[data-page="home"] .cc-home-proof-list strong {
+  color: #feca06;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+body[data-page="home"] #operating-proof .cc-home-proof-list p {
+  margin: 0;
+  line-height: 1.5;
+}
+/* New coverage copy surrounds, but never changes, the fifteen-area widget. */
+body[data-page="home"] #coverage {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-block: clamp(56px, 6vw, 88px) !important;
+}
+body[data-page="home"] #coverage > .section-shell {
+  height: auto !important;
+  min-height: 0 !important;
+}
+body[data-page="home"] #coverage .cc-home-coverage-intro {
+  max-width: 76ch;
+  margin: 28px 0;
+  color: #505b63;
+  line-height: 1.6;
+}
+body[data-page="home"] .cc-home-offices {
+  padding: 24px 0;
+  border-block: 1px solid #c9d0d5;
+}
+body[data-page="home"] .cc-home-offices h3 {
+  margin: 0 0 18px;
+  color: #202327;
+  font-size: 1.2rem;
+}
+body[data-page="home"] .cc-home-offices ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body[data-page="home"] .cc-home-offices li {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+}
+body[data-page="home"] .cc-home-offices strong { color: #202327; }
+body[data-page="home"] .cc-home-offices span { color: #505b63; }
+body[data-page="home"] .cc-home-coverage-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 24px 0;
+  border-block: 1px solid #c9d0d5;
+}
+body[data-page="home"] .cc-home-coverage-cta p {
+  max-width: 60ch;
+  margin: 0;
+  color: #505b63;
+  line-height: 1.6;
+}
+body[data-page="home"] #coverage .cc-home-coverage-cta a {
+  flex-shrink: 0;
+  color: #765600;
+  border-color: #765600;
+}
+body[data-page="home"] #coverage #home-service-access-map-note { margin-top: 18px; }
+/* Size the incumbent stage to actual copy; preserve its scroll-linked travel.
+   The unchanged controller measures story minus stage, so extra content does
+   not compress its reversible media interval or overlap the following FAQ. */
+html[data-home-technology-controller="scroll-linked"] body[data-page="home"] #technology {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-bottom: var(--ga-home-technology-travel) !important;
+}
+html[data-home-technology-controller="scroll-linked"] body[data-page="home"] #technology .home-technology-v4__shell {
+  height: auto !important;
+  min-height: var(--ga-home-chapter-h);
+}
+body[data-page="home"] #technology .home-technology-v4__body {
+  height: auto;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+  grid-template-areas: "art copy" !important;
+  gap: clamp(24px, 3vw, 48px);
+}
+body[data-page="home"] #technology .home-technology-v4__copy {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-areas: "heading" "ledger" "actions" !important;
+  gap: 22px;
+  padding-block: 24px;
+}
+body[data-page="home"] #technology .home-technology-v4__heading h2 {
+  max-width: 18ch;
+  font-size: clamp(2.4rem, 3.3vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+}
+body[data-page="home"] #technology .home-technology-v4__intro {
+  max-width: 56ch;
+  line-height: 1.5;
+}
+body[data-page="home"] #technology .home-technology-v4__ledger h3 {
+  max-width: none;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+body[data-page="home"] #technology .home-technology-v4__ledger p {
+  margin: 0;
+  color: #c1c6cb;
+  line-height: 1.5;
+}
+body[data-page="home"] #technology .product-first-art {
+  max-width: 100% !important;
+}
+body[data-page="home"] .cc-home-faq {
+  background: #fff;
+  color: #202327;
+  padding-block: clamp(64px, 7vw, 104px);
+}
+body[data-page="home"] .cc-home-faq-shell {
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr);
+  gap: clamp(32px, 6vw, 80px);
+}
+body[data-page="home"] .cc-home-faq h2 {
+  max-width: 15ch;
+  margin: 0;
+  color: #202327;
+  font-size: clamp(2.3rem, 3.5vw, 3.6rem);
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+body[data-page="home"] .cc-home-faq-item {
+  border-top: 1px solid #c9d0d5;
+  margin: 0;
+}
+body[data-page="home"] .cc-home-faq-item:last-of-type { border-bottom: 1px solid #c9d0d5; }
+body[data-page="home"] .cc-home-faq-item summary {
+  min-height: 64px;
+  padding: 20px 8px;
+  cursor: pointer;
+  color: #202327;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+body[data-page="home"] .cc-home-faq-item summary::marker { color: #765600; }
+body[data-page="home"] .cc-home-faq-item p {
+  margin: 0;
+  padding: 0 8px 24px;
+  max-width: 70ch;
+  color: #505b63;
+  line-height: 1.6;
+}
+body[data-page="home"] .cc-home-faq .text-link {
+  margin-top: 24px;
+  color: #765600;
+  border-color: #765600;
+}
+body[data-page="home"] .cc-home-clients-title {
+  margin: 0 0 32px;
+  color: inherit;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  text-align: center;
+}
+/* Reuse the original directory and image, now a normal-flow closing chapter. */
+body[data-page="home"] #next-step,
+body[data-page="home"] #home-site-navigator { background-color: #fff; color: #202327; }
+body[data-page="home"] #home-site-navigator .home-site-navigator__heading {
+  position: static;
+  align-self: start;
+  border-left: 0;
+  padding: 0;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__heading h2 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 4.3vw, 4.8rem);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__routes strong {
+  font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  overflow-wrap: normal;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__editorial-list a {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px 24px !important;
+}
+body[data-page="home"] #home-site-navigator .home-site-navigator__editorial-list small { grid-area: 1 / 1; }
+body[data-page="home"] #home-site-navigator .home-site-navigator__editorial-list strong { grid-area: 2 / 1; }
+body[data-page="home"] #home-site-navigator .home-site-navigator__editorial-list a > span { grid-area: 1 / 2 / 3; }
+body[data-page="home"] :is(#faq, #next-step, #operating-proof) { scroll-margin-top: calc(var(--header-h, 76px) + 16px); }
+body[data-page="home"] :is(.cc-home-faq a, .cc-home-coverage-cta a, #operating-proof .text-link) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+body[data-page="home"] :is(.cc-home-faq summary, .cc-home-faq a, .cc-home-coverage-cta a):focus-visible {
+  outline: 3px solid #765600;
+  outline-offset: 4px;
+}
+@media (max-width: 980px) {
+  body[data-page="home"] #operating-proof .home-operating-proof__grid,
+  body[data-page="home"] .cc-home-faq-shell { grid-template-columns: minmax(0, 1fr); }
+  body[data-page="home"] #technology .home-technology-v4__body {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas: "art" "copy" !important;
+  }
+  body[data-page="home"] #technology .home-technology-v4__copy {
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: 1px solid #474d53;
+  }
+  body[data-page="home"] #technology .product-first-art { width: min(100%, 660px); }
+}
+@media (max-width: 600px) {
+  body[data-page="home"] #hero-title { font-size: clamp(2rem, 8.5vw, 2.7rem); max-width: 20ch; }
+  body[data-page="home"] .cc-home-proof-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  body[data-page="home"] .cc-home-offices ul { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  body[data-page="home"] .cc-home-coverage-cta { align-items: flex-start; flex-direction: column; gap: 12px; }
+  body[data-page="home"] #technology .home-technology-v4__heading h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  body[data-page="home"] .cc-home-faq-item summary { padding-inline: 0; }
+  body[data-page="home"] .cc-home-faq-item p { padding-inline: 0; }
+}
+@media (forced-colors: active) {
+  body[data-page="home"] :is(.cc-home-faq, #next-step, #home-site-navigator) { background: Canvas; color: CanvasText; }
+  body[data-page="home"] :is(.cc-home-faq h2, .cc-home-faq summary, .cc-home-faq p, .cc-home-offices strong, .cc-home-offices span, .cc-home-proof-list strong, #technology .home-technology-v4__ledger p) { color: CanvasText; }
+  body[data-page="home"] :is(.cc-home-faq-item, .cc-home-offices, .cc-home-proof-list, .cc-home-proof-list li, .cc-home-coverage-cta) { border-color: CanvasText; }
+  body[data-page="home"] .cc-home-faq-item summary::marker { color: ButtonText; }
+}
